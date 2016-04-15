@@ -1,6 +1,6 @@
 {
     "name": "lukaszmakuch/text-generator",
-    "description": "Allows to get a string representation of anything.",
+    "description": "Allows to convert anything to text.",
     "type": "library",
     "license": "MIT",
     "authors": [
