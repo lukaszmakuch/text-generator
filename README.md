@@ -30,12 +30,12 @@ $textGenerator->addTextualRepresentationOf(
 echo $textGenerator->getTextBasedOn(new \DateTime()); //"a DateTime object"
 ```
 
-### ObjectTextGenerator
+### ObjectToTextConverter
 Template of a generator that converts an object to text.
 ```php
-use lukaszmakuch\TextGenerator\ObjectTextGenerator;
+use lukaszmakuch\TextGenerator\ObjectToTextConverter;
 
-class DateTimeTextPresenter extends ObjectTextGenerator
+class DateTimeTextPresenter extends ObjectToTextConverter
 {
     protected function getClassOfSupportedObjects()
     {

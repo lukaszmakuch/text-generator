@@ -9,14 +9,14 @@
 
 namespace lukaszmakuch\TextGenerator\Example;
 
-use lukaszmakuch\TextGenerator\ObjectTextGenerator;
+use lukaszmakuch\TextGenerator\ObjectToTextConverter;
 
 /**
  * Created for testing purposes.
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class TextHoldingClassTextGenerator extends ObjectTextGenerator
+class TextHoldingClassTextGenerator extends ObjectToTextConverter
 {
     protected function getClassOfSupportedObjects()
     {

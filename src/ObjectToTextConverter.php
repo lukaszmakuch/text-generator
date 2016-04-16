@@ -18,7 +18,7 @@ use lukaszmakuch\TextGenerator\Exception\UnableToGetText;
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-abstract class ObjectTextGenerator implements TextGenerator
+abstract class ObjectToTextConverter implements TextGenerator
 {
     public function getTextBasedOn($input)
     {

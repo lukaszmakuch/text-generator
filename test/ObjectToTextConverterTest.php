@@ -18,7 +18,7 @@ use PHPUnit_Framework_TestCase;
 /**
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class ObjectTextGeneratorTest extends PHPUnit_Framework_TestCase
+class ObjectToTextConverterTest extends PHPUnit_Framework_TestCase
 {
     private $textGenerator;
     
