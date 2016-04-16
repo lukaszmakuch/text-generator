@@ -9,32 +9,16 @@
 
 namespace lukaszmakuch\TextGenerator;
 
+use DateTime;
+use lukaszmakuch\TextGenerator\Example\TextHoldingClass;
+use lukaszmakuch\TextGenerator\Example\TextHoldingClassTextGenerator;
 use lukaszmakuch\TextGenerator\Exception\UnableToGetText;
-
-class TextHoldingClass
-{
-    public $itsText;
-    public function __construct($itsText) { $this->itsText = $itsText; }
-}
-
-class TextHoldingClassTextGenerator extends ObjectTextGenerator
-{
-    protected function getClassOfSupportedObjects()
-    {
-        return TextHoldingClass::class;
-    }
-
-    protected function getTextBasedOnObject($object)
-    {
-        /* @var $object TextHoldingClass */
-        return $object->itsText;
-    }
-}
+use PHPUnit_Framework_TestCase;
 
 /**
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
  */
-class ObjectTextGeneratorTest extends \PHPUnit_Framework_TestCase
+class ObjectTextGeneratorTest extends PHPUnit_Framework_TestCase
 {
     private $textGenerator;
     
@@ -58,7 +42,7 @@ class ObjectTextGeneratorTest extends \PHPUnit_Framework_TestCase
             UnableToGetText::class, 
             "@expected " . preg_quote(TextHoldingClass::class) . ".*DateTime was given@"
         );
-        $this->textGenerator->getTextBasedOn(new \DateTime());
+        $this->textGenerator->getTextBasedOn(new DateTime());
     }
 
     public function testGeneratingTextBasedOnObjects()
