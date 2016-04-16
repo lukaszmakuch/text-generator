@@ -1,6 +1,6 @@
 {
     "name": "lukaszmakuch/text-generator",
-    "description": "Allows to convert anything to text.",
+    "description": "Converts anything to text. Works like a toString implementation, but outside the object.",
     "type": "library",
     "license": "MIT",
     "authors": [
