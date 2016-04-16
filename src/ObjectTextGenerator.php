@@ -12,6 +12,8 @@ namespace lukaszmakuch\TextGenerator;
 use lukaszmakuch\TextGenerator\Exception\UnableToGetText;
 
 /**
+ * Template of a generator that converts an object to text.
+ * 
  * Ensures that the given input is an object of a supported class.
  * 
  * @author Łukasz Makuch <kontakt@lukaszmakuch.pl>
