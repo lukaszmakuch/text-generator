@@ -9,9 +9,9 @@
 
 namespace lukaszmakuch\TextGenerator;
 
-use lukaszmakuch\TextGenerator\Exception\UnableToGetText;
 use lukaszmakuch\ClassBasedRegistry\ClassBasedRegistry;
 use lukaszmakuch\ClassBasedRegistry\Exception\ValueNotFound;
+use lukaszmakuch\TextGenerator\Exception\UnableToGetText;
 
 /**
  * Delegates work based on the class of a given object.
@@ -27,6 +27,12 @@ class ClassBasedTextGeneratorProxy implements TextGenerator
         $this->actualGenerators = new ClassBasedRegistry();
     }
     
+    /**
+     * Adds support of the given class of objects by the given generator.
+     * 
+     * @param String $classOfSupportedObjects
+     * @param TextGenerator $actualGenerator
+     */
     public function registerActualGenerator(
         $classOfSupportedObjects, 
         TextGenerator $actualGenerator
