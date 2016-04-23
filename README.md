@@ -75,6 +75,14 @@ $textGenerator = NULLTextGenerator::getInstance();
 $textGenerator->getTextBasedOn($anything); //an empty string
 ```
 
+### StaticTextGenerator
+Always returns the same text regardless what is the input.
+```php
+use lukaszmakuch\TextGenerator\StaticTextGenerator;
+
+(new StaticTextGenerator("abc"))->getTextBasedOn("anything"); //abc
+```
+
 ### SimpleTextGeneratorProxy
 Hides some actual implementation under the hood. Useful when solving circular dependencies.
 ```php
